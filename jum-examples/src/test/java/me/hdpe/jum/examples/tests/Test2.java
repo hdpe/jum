@@ -2,8 +2,8 @@ package me.hdpe.jum.examples.tests;
 
 import me.hdpe.jum.annotation.Mixins;
 import me.hdpe.jum.examples.mixins.FeatureA;
-import me.hdpe.jum.examples.mixins.FeatureB;
 import me.hdpe.jum.examples.mixins.FeatureA.SupportsFeatureA;
+import me.hdpe.jum.examples.mixins.FeatureB;
 import me.hdpe.jum.examples.mixins.FeatureB.SupportsFeatureB;
 import me.hdpe.jum.runner.MixinsRunner;
 
