@@ -95,7 +95,7 @@ There's a few things we've done here. We've:
 * Annotated a field with `@TestReference` - jum will inject an instance of the calling test class here.
 * Specified the jum `MixinRunner` as the JUnit runner, which dynamically includes the classes listed in the `@Mixins` annotation into the test execution.
 
-To my mind the advantage of such an approach over inheriting tests from an abstract superclass is clear: we can introduce a `Component2` without having to create a parallel test hierarchy. We just implement the required setup methods in our test and add the new component class to the `@Mixins annotation`:
+To my mind the advantage of such an approach over inheriting tests from an abstract superclass is clear: we can introduce a `Component2` without having to create a parallel test hierarchy. We just implement the required setup methods in our test and add the new component class to the `@Mixins` annotation:
 
 ```java
 @Mixins({Component1.class, Component2.class, ...})
