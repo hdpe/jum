@@ -37,7 +37,6 @@ class JumJUnit4ClassRunner extends BlockJUnit4ClassRunner {
     }
 
     protected Description describeChild(FrameworkMethod method) {
-        return Description.createTestDescription(suiteClass, getTestClass().getJavaClass().getSimpleName() +
-                "." + method.getName(), method.getAnnotations());
+        return Description.createTestDescription(suiteClass, method.getName(), method.getAnnotations());
     }
 }
