@@ -13,7 +13,7 @@ public abstract class FeatureA {
     }
     
     @TestReference
-    private SupportsFeatureA test;
+    public SupportsFeatureA test;
 
     @Test
     @Ignore

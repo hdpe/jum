@@ -12,7 +12,7 @@ public abstract class FeatureC {
     }
     
     @TestReference
-    private SupportsFeatureC test;
+    public SupportsFeatureC test;
 
     @Test
     public void featureCTest() {

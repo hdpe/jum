@@ -28,7 +28,6 @@ class JumJUnit4ClassRunner extends BlockJUnit4ClassRunner {
         if (!supportFields.isEmpty()) {
             Object suite = suiteClass.getConstructor().newInstance();
             for (FrameworkField field : supportFields) {
-                field.getField().setAccessible(true);
                 field.getField().set(test, suite);
             }
         }

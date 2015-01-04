@@ -13,7 +13,7 @@ public abstract class FeatureB {
     }
     
     @TestReference
-    private SupportsFeatureB test;
+    public SupportsFeatureB test;
     
     @Before
     public void setUp() {
