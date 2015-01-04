@@ -5,14 +5,14 @@ import me.hdpe.jum.annotation.TestReference;
 
 import org.junit.Test;
 
-public abstract class FeatureC {
+public abstract class FeatureCTests {
 
-    public interface SupportsFeatureC {
+    public interface SupportsFeatureCTests {
         Object getFeatureCDependency();
     }
     
     @TestReference
-    public SupportsFeatureC test;
+    public SupportsFeatureCTests test;
 
     @Test
     public void featureCTest() {

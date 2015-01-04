@@ -6,14 +6,14 @@ import me.hdpe.jum.annotation.TestReference;
 import org.junit.Ignore;
 import org.junit.Test;
 
-public abstract class FeatureA {
+public abstract class FeatureATests {
 
-    public interface SupportsFeatureA {
+    public interface SupportsFeatureATests {
         Object getFeatureADependency();
     }
     
     @TestReference
-    public SupportsFeatureA test;
+    public SupportsFeatureATests test;
 
     @Test
     @Ignore

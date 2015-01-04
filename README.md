@@ -69,17 +69,17 @@ Let's turn the problem on its head. The test class for `Screen1` should simply b
 
 ```java
 @RunWith(MixinRunner.class)
-@Mixins({Component1.class})
-class Screen1Test implements SupportsComponent1 {
+@Mixins({Component1Tests.class})
+class Screen1Test implements SupportsComponent1Tests {
   @Override public Stuff doComponent1Setup() { ... }
 }
 
-abstract class Component1 {
-	interface SupportsComponent1 {
+abstract class Component1Tests {
+	interface SupportsComponent1Tests {
 	  Stuff doComponent1Setup();
 	}
   
-  @TestReference public SupportsComponent1 test;
+  @TestReference public SupportsComponent1Tests test;
   
   @Test public void clickDoesWhatItShould() {
     Stuff stuff = test.doComponent1Setup();
@@ -98,8 +98,8 @@ There's a few things we've done here. We've:
 To my mind the advantage of such an approach over inheriting tests from an abstract superclass is clear: we can introduce a `Component2` without having to create a parallel test hierarchy. We just implement the required setup methods in our test and add the new component class to the `@Mixins` annotation:
 
 ```java
-@Mixins({Component1.class, Component2.class, ...})
-class Screen1Test implements SupportsComponent1, SupportsComponent2, ... {
+@Mixins({Component1Tests.class, Component2Tests.class, ...})
+class Screen1Test implements SupportsComponent1Tests, SupportsComponent2Tests, ... {
   @Override public Stuff doComponent1Setup() { ... }
   
   @Override public Stuff doComponent2Setup() { ... }

@@ -6,18 +6,18 @@ import me.hdpe.jum.annotation.TestReference;
 import org.junit.Before;
 import org.junit.Test;
 
-public abstract class FeatureB {
+public abstract class FeatureBTests {
 
-    public interface SupportsFeatureB {
+    public interface SupportsFeatureBTests {
         Object getFeatureBDependency();
     }
     
     @TestReference
-    public SupportsFeatureB test;
+    public SupportsFeatureBTests test;
     
     @Before
     public void setUp() {
-        System.out.println("before each test in " + FeatureB.class.getSimpleName());
+        System.out.println("before each test in " + FeatureBTests.class.getSimpleName());
     }
     
     @Test
